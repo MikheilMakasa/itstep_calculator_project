@@ -19,3 +19,22 @@ class Calculator:
         else:
             return "❗ Error ❗ You can't divide by zero 💣"
 
+# Function to get user input, with input validation for numbers.
+def get_input():
+    while True:
+        try:
+            num1 = float(input("📝 Enter your first number: "))
+            break
+        except ValueError:
+            print("❌ Invalid input ❌ Please enter a valid number.")
+
+    operation = input("📝 Enter the operation (+, -, *, /): ")
+
+    while True:
+        try:
+            num2 = float(input("📝 Enter your second number: "))
+            break
+        except ValueError:
+            print("❌ Invalid input ❌ Please enter a valid number.")
+
+    return num1, operation, num2
