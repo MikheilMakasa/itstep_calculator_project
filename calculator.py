@@ -38,3 +38,33 @@ def get_input():
             print("❌ Invalid input ❌ Please enter a valid number.")
 
     return num1, operation, num2
+
+# Main function to handle the calculation. 
+def calculate():
+
+    # Creating an instance of the Calculator class.
+    calculator = Calculator()
+
+    while True:
+        # Get user input for the calculation.
+        num1, operation, num2 = get_input()
+
+        if operation in ['+', '-', '*', '/']:
+            # Performing the  operation based on user input.
+            if operation == '+':
+                result = calculator.add(num1, num2)
+            elif operation == '-':
+                result = calculator.subtract(num1, num2)
+            elif operation == '*':
+                result = calculator.multiply(num1, num2)
+            elif operation == '/':
+                result = calculator.divide(num1, num2)
+
+            # Display the result of the calculation.
+            print(f"✅ Result: {result}")
+        else:
+            # Display an error message for invalid operations.
+            print("❌ Invalid operation ❌ Please enter a valid operation (+, -, *, /).")
+
+# Start the calculation process.
+calculate()
