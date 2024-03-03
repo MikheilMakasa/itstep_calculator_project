@@ -66,5 +66,20 @@ def calculate():
             # Display an error message for invalid operations.
             print("❌ Invalid operation ❌ Please enter a valid operation (+, -, *, /).")
 
+         # Ask the user if they want to perform another calculation.
+        recalculate = input("🔄 Do you want to do another calculation? (y/n): ").lower()
+
+        if recalculate == 'y':
+            # If yes, continue with another calculation.
+            continue
+        elif recalculate == 'n':
+            # If no, display a shutdown message and exit the loop.
+            print('💤 Shutting down the program...')
+            break
+        else:
+            # Display an error message for invalid input and stop the program.
+            print('❌ Invalid input ❌ Stopping the program...')
+            break
+
 # Start the calculation process.
 calculate()
